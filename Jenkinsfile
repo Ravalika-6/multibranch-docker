@@ -15,7 +15,7 @@ pipeline {
         stage('Push') {
             steps {
                 script {
-                    withDockerRegistry(credentialsId: 'dockerhub') {
+                   withDockerRegistry(url: 'https://app.docker.com/accounts/ravalikn') {
                         sh 'docker push shaikmustafa/paytm:movie'
                     }
                 }
